@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flourish Embed</title>
+<style>
+/* Customize the map container size */
+.map-container {
+    width: 65%;
+    height: 500px; /* Adjust the height as per your need */
+    margin: 0 auto; /* Center horizontally */
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh; /* Adjusted height to make it closer to the text */
+    margin: 5px; /* Reduced margin to make it closer to the text */
+}
+
+video {
+    max-width: calc(100% - 20px); /* Membuat video tidak melebihi lebar layar setelah jarak diberikan */
+    max-height: calc(100% - 20px); /* Membuat video tidak melebihi tinggi layar setelah jarak diberikan */
+    margin: 0 20px;
+}
+
+.column {
+    width: 25%;
+    padding: 20px;
+    align-items: center;
+    opacity: 0; /* Mulai dengan opacity 0 */
+    transform: translateY(20px); /* Pergeseran vertikal sebelum muncul */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Animasi untuk opacity dan transform */
+}
+
+.row {
+    display: flex; /* Menjadikan elemen baris menjadi flex container */
+    justify-content: space-around; /* Menyamakan jarak antara konten */
+    align-items: flex-start; /* Menyamakan konten secara vertikal */
+    max-width: 1200px; /* Optional: memberikan batas lebar maksimum untuk konten */
+    margin: 0 auto; /* Menengahkan konten secara horizontal */
+    overflow: hidden; /* Optional: untuk mengatasi masalah margin auto pada float */
+    text-align: center; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Animasi fade in saat scroll */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tambahkan animasi fade in saat class column masuk ke dalam viewport */
+.column.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+</style>
+</head>
+<body>
+
+<div class="video-container">
+    <video width="333" height="500" controls autoplay loop>
+        <source src="Untitled video - Made with Clipchamp (2).mp4" type="video/mp4">
+    </video>
+
+    <video width="333" height="500" controls autoplay loop>
+        <source src="Untitled video - Made with Clipchamp (3).mp4" type="video/mp4">
+    </video>
+
+    <video width="333" height="500" controls autoplay loop>
+        <source src="Untitled video - Made with Clipchamp (1).mp4" type="video/mp4">
+    </video>
+</div>
+
+<div class="row">
+    <div class="column" style="animation-delay: 0.2s;" > <!-- Delay untuk animasi -->
+        <h1>Tokyo, Japan</h1>
+        <p>Although Tokyo has a developing cycling infrastructure and separate bike lanes along its Copenhagen and Amsterdam counterparts, Tokyo stands out as one of the cities that offers a challenging and unique cycling experience due to its diverse urban landscape, which includes highly urbanized areas, parks and urban forests, as well as traditional residential neighborhoods. This provides a non-monotonous and highly engaging cycling experience.</p>
+    </div>
+    <div class="column" style="animation-delay: 0.4s;">
+        <h1>Copenhagen, Denmark</h1>
+        <p>It boasts a comprehensive cycling infrastructure, including dedicated bike lanes, cycle tracks, and bridges, which make cycling safe and convenient for residents and visitors alike. The city's flat terrain also contributes to its suitability for cycling, and its extensive network of bike-sharing programs further promotes cycling as a primary mode of transportation. Copenhagen can be considered an excellent city for cycling, with a high bicycle mode share of over 36% of all trips, and the city's strong commitment to becoming the "world's best bicycle city" by 2025.</p>
+    </div>
+    <div class="column" style="animation-delay: 0.6s;">
+        <h1>Amsterdam, Netherlands</h1>
+        <p>Amsterdam is widely regarded as one of the best cities in the world for cycling. It has an extensive network of dedicated bike lanes and paths, making it safe and convenient for cyclists to navigate the city. The flat terrain also makes cycling easy and accessible for people of all ages and abilities. They have a high rate of bicycle ownership which is 1.9 per household. Additionally, Amsterdam has a strong cycling culture, with a large portion of the population using bicycles as their primary mode of transportation. Overall, Amsterdam offers a highly bike-friendly environment, making it an excellent place for cycling.</p>
+    </div>
+</div>
+<div class="row">
+    <div class="column fade-in" style="animation-delay: 2s;"> <!-- Ubah nilai animation-delay sesuai dengan kebutuhan -->
+        <h2>Length of Bike Path</h2>
+        <p><100 Kilometer square</p>
+    </div>
+    <div class="column fade-in" style="animation-delay: 2.2s;"> <!-- Ubah nilai animation-delay sesuai dengan kebutuhan -->
+        <h2>Length of Bike Path</h2>
+        <p> 397 Kilometer square</p>
+    </div>
+    <div class="column fade-in" style="animation-delay: 2.4s;"> <!-- Ubah nilai animation-delay sesuai dengan kebutuhan -->
+        <h2>Length of Bike Path</h2>
+        <p> 515 Kilometer square</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="column fade-in" style="animation-delay: 2.6s;"> <!-- Ubah nilai animation-delay sesuai dengan kebutuhan -->
+        <h2>Bicycle Ownership</h2>
+        <p> 99%</p>
+    </div>
+    <div class="column fade-in" style="animation-delay: 2.8s;"> <!-- Ubah nilai animation-delay sesuai dengan kebutuhan -->
+        <h2>Bicycle Ownership</h2>
+        <p> 81%</p>
+    </div>
+    <div class="column fade-in" style="animation-delay: 3s;"> <!-- Ubah nilai animation-delay sesuai dengan kebutuhan -->
+        <h2>Bicycle Ownership</h2>
+        <p> 57%</p>
+    </div>
+</div>
+
+
+<br><br><br><br><br>
+
+<div class="map-container">
+    <div class="flourish-embed flourish-cards" data-src="visualisation/17659525"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+</div>
+
+<script>
+// Fungsi untuk memeriksa apakah elemen masuk ke dalam viewport
+function isInViewport(element) {
+    var rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// Fungsi untuk menambahkan class fade-in ke elemen saat masuk ke dalam viewport
+function addFadeInClass() {
+    var columns = document.querySelectorAll('.column');
+    columns.forEach(function(column) {
+        if (isInViewport(column)) {
+            column.classList.add('fade-in');
+        }
+    });
+}
+
+// Event listener untuk menambahkan class fade-in saat scroll
+document.addEventListener('scroll', addFadeInClass);
+</script>
+
+</body>
+</html>
