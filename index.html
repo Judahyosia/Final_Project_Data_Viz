@@ -21,8 +21,8 @@
 }
 
 video {
-    max-width: calc(100% - 20px); /* Membuat video tidak melebihi lebar layar setelah jarak diberikan */
-    max-height: calc(100% - 20px); /* Membuat video tidak melebihi tinggi layar setelah jarak diberikan */
+    max-width: calc(100% - 20px); 
+    max-height: calc(100% - 20px); 
     margin: 0 20px;
 }
 
@@ -30,18 +30,18 @@ video {
     width: 25%;
     padding: 20px;
     align-items: center;
-    opacity: 0; /* Mulai dengan opacity 0 */
-    transform: translateY(20px); /* Pergeseran vertikal sebelum muncul */
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Animasi untuk opacity dan transform */
+    opacity: 0; 
+    transform: translateY(20px); 
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; 
 }
 
 .row {
-    display: flex; /* Menjadikan elemen baris menjadi flex container */
-    justify-content: space-around; /* Menyamakan jarak antara konten */
-    align-items: flex-start; /* Menyamakan konten secara vertikal */
-    max-width: 1200px; /* Optional: memberikan batas lebar maksimum untuk konten */
-    margin: 0 auto; /* Menengahkan konten secara horizontal */
-    overflow: hidden; /* Optional: untuk mengatasi masalah margin auto pada float */
+    display: flex; 
+    justify-content: space-around; 
+    align-items: flex-start; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    overflow: hidden; 
     text-align: center; 
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -64,7 +64,7 @@ video {
     }
 }
 
-/* Tambahkan animasi fade in saat class column masuk ke dalam viewport */
+
 .column.fade-in {
     opacity: 1;
     transform: translateY(0);
@@ -102,30 +102,30 @@ video {
     </div>
 </div>
 <div class="row">
-    <div class="column fade-in" style="animation-delay: 2s;"> <!-- Ubah nilai animation-delay sesuai dengan kebutuhan -->
+    <div class="column fade-in" style="animation-delay: 2s;"> 
         <h2>Length of Bike Path</h2>
         <p><100 Kilometer square</p>
     </div>
-    <div class="column fade-in" style="animation-delay: 2.2s;"> <!-- Ubah nilai animation-delay sesuai dengan kebutuhan -->
+    <div class="column fade-in" style="animation-delay: 2.2s;"> 
         <h2>Length of Bike Path</h2>
         <p> 397 Kilometer square</p>
     </div>
-    <div class="column fade-in" style="animation-delay: 2.4s;"> <!-- Ubah nilai animation-delay sesuai dengan kebutuhan -->
+    <div class="column fade-in" style="animation-delay: 2.4s;"> 
         <h2>Length of Bike Path</h2>
         <p> 515 Kilometer square</p>
     </div>
 </div>
 
 <div class="row">
-    <div class="column fade-in" style="animation-delay: 2.6s;"> <!-- Ubah nilai animation-delay sesuai dengan kebutuhan -->
+    <div class="column fade-in" style="animation-delay: 2.6s;"> 
         <h2>Bicycle Ownership</h2>
         <p> 99%</p>
     </div>
-    <div class="column fade-in" style="animation-delay: 2.8s;"> <!-- Ubah nilai animation-delay sesuai dengan kebutuhan -->
+    <div class="column fade-in" style="animation-delay: 2.8s;"> 
         <h2>Bicycle Ownership</h2>
         <p> 81%</p>
     </div>
-    <div class="column fade-in" style="animation-delay: 3s;"> <!-- Ubah nilai animation-delay sesuai dengan kebutuhan -->
+    <div class="column fade-in" style="animation-delay: 3s;"> 
         <h2>Bicycle Ownership</h2>
         <p> 57%</p>
     </div>
@@ -139,7 +139,6 @@ video {
 </div>
 
 <script>
-// Fungsi untuk memeriksa apakah elemen masuk ke dalam viewport
 function isInViewport(element) {
     var rect = element.getBoundingClientRect();
     return (
@@ -150,7 +149,7 @@ function isInViewport(element) {
     );
 }
 
-// Fungsi untuk menambahkan class fade-in ke elemen saat masuk ke dalam viewport
+
 function addFadeInClass() {
     var columns = document.querySelectorAll('.column');
     columns.forEach(function(column) {
@@ -160,7 +159,7 @@ function addFadeInClass() {
     });
 }
 
-// Event listener untuk menambahkan class fade-in saat scroll
+
 document.addEventListener('scroll', addFadeInClass);
 </script>
 
