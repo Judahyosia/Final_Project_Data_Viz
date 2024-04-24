@@ -8,7 +8,7 @@
     <style>
       /* Customize the map container size */
       .map-container {
-        width: 65%;
+        width: 80%;
         height: 500px; /* Adjust the height as per your need */
         margin: 0 auto; /* Center horizontally */
       }
@@ -28,6 +28,7 @@
       }
 
       .column {
+        color: rgb(83, 83, 83);
         width: 25%;
         padding: 20px;
         align-items: center;
@@ -39,6 +40,7 @@
       }
 
       .row {
+        color: rgb(83, 83, 83);
         display: flex;
         justify-content: space-around;
         align-items: flex-start;
@@ -112,8 +114,21 @@
       <div class="milestone">
         <h2>Milestone</h2>
         <p>
-          This section represents a milestone in the Park Connector Network
-          project. You can provide milestone details here.
+          In the 1990s, Singapore introduced the concept of the Park Connector
+          Network (PCN) as part of its efforts to create a "City in a Garden".
+          The PCN Master Plan was completed in 1995, leading to the opening of
+          the first segment, Jurong PCN, in 1996. The development of the PCN
+          continued in the 2000s with initiatives such as the "Round Island
+          Route" project in 2011 and the completion of the Coast-to-Coast Trail
+          in 2017. Ongoing expansion and improvement efforts have been taking
+          place in the 2020s, making the PCN an essential component of
+          Singapore's urban landscape. Similarly, the North-South Corridor (NSC)
+          in Singapore began development in the 2010s with the announcement of
+          plans for the integrated transport corridor in 2013. Construction
+          works for the NSC have been progressing, with completion expected in
+          the mid-2020s. The Bukit Timah-Rochor Green Corridor, connecting the
+          NSC to the city center, is also undergoing construction and is
+          projected to be completed by the mid-2020s.
         </p>
         <img src="Milestone.gif" alt="Milestone GIF" />
       </div>
@@ -224,8 +239,6 @@
         <script src="https://public.flourish.studio/resources/embed.js"></script>
       </div>
     </div>
-
-    <script src="scripts.js"></script>
     <script>
       function isInViewport(element) {
         var rect = element.getBoundingClientRect();
@@ -251,8 +264,8 @@
       document.addEventListener("scroll", addFadeInClass);
 
       function showHome() {
-        const mapContainer2 = document.querySelector(".map-container2");
-        mapContainer2.scrollIntoView({ behavior: "smooth" });
+        const buttonContainer = document.querySelector(".map-container2");
+        buttonContainer.scrollIntoView({ behavior: "smooth" });
       }
 
       function showMilestone() {

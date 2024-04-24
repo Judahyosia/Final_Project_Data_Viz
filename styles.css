@@ -4,10 +4,12 @@
   min-height: 100vh; /* Adjusted height */
   position: relative; /* Added position relative */
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  padding-top: 70px; /* Adjust the padding as needed */
+  color: rgb(83, 83, 83);
 }
 
 .description {
-  background-color: #f0f0f000;
+  background-color: #3e3b3b00;
   padding: 20px;
   text-align: center;
   z-index: 1; /* Change z-index to 1 */
@@ -28,7 +30,7 @@
 .milestone {
   background-color: #f0f0f000;
   padding: 20px;
-  width: 80%;
+  width: 90%;
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
@@ -38,10 +40,13 @@
 }
 
 .button-container {
-  background-color: #000000;
+  background-color: #000000a8;
   padding: 10px;
   display: flex;
   justify-content: space-around;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
 }
 
 .button {
@@ -50,14 +55,14 @@
   border-radius: 5px;
   cursor: pointer;
   background-color: #007bff00;
-  color: #6f6d6d;
+  color: #ffffff;
   font-size: 16px;
   font-style: bold;
   text-decoration: none;
 }
 
 .button:hover {
-  background-color: #92929273;
+  background-color: #9292928e;
 }
 
 .container {
